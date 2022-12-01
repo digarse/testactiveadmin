@@ -1,0 +1,28 @@
+<h1>Product Index Page</h1>
+<html>
+<head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <table style="width:100%"> 
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>description</th>
+      </tr>
+    </thead>
+    <% @products.each do |product| %>
+
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td> 
+      </tr>
+    <% end %>
+  </table>
+</body>
+</html>
